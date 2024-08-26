@@ -43,7 +43,7 @@ struct ContentView: View {
           
           HStack(spacing: 10) {
             // TITLE
-            Text("Devote")
+            Text("Denote")
               .font(.system(.largeTitle, design: .rounded))
               .fontWeight(.heavy)
               .padding(.leading, 4)

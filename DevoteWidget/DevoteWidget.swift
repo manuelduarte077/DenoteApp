@@ -58,8 +58,8 @@ struct DevoteWidgetEntryView : View {
         Image("logo")
           .resizable()
           .frame(
-            width: widgetFamily != .systemSmall ? 56 : 36,
-            height: widgetFamily != .systemSmall ? 56 : 36
+            width: widgetFamily != .systemSmall ? 46 : 26,
+            height: widgetFamily != .systemSmall ? 46 : 26
           )
           .offset(
             x: (geometry.size.width / 2) - 20,
@@ -88,19 +88,20 @@ struct DevoteWidgetEntryView : View {
         .padding()
         .offset(y: (geometry.size.height / 2) - 24)
       } //: ZSTACK
+      .cornerRadius(20)
     } //: GEOMETRY
   }
 }
 
 @main
 struct DevoteWidget: Widget {
-  let kind: String = "DevoteWidget"
+  let kind: String = "DenoteWidget"
   
   var body: some WidgetConfiguration {
     StaticConfiguration(kind: kind, provider: Provider()) { entry in
       DevoteWidgetEntryView(entry: entry)
     }
-    .configurationDisplayName("Devote Launcher")
+    .configurationDisplayName("Denote Launcher")
     .description("This is an example widget for the personal task manager app.")
   }
 }
